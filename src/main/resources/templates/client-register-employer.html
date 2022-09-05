@@ -237,7 +237,7 @@
                },
                data:JSON.stringify(person),
                crossDomain: true,
-               url:"https://rh-app-v1.herokuapp.com/register-user",
+               url:"https://rh-app-v1.herokuapp.com/api/register-user",
                success:function(data){
                         console.log("User :"+data +" Is successfully registered");
                         $("#reg-validate").append("You have successfully registered your profile with us. \n We will be in touch");
