@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Staging Template">
+    <meta name="keywords" content="Staging, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Staging | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+  <div th:insert = "side-bar :: side-bar"></div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header header-normal set-bg" data-setbg="img/little-header.jpg">
+       
+       <div th:insert = "registration-header :: registration-header"></div>
+    </header>
+    <!-- Header Section End -->
+ 
+    <!-- Contact Section Begin -->
+    <section class="contact spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="contact__text">
+                        <div class="section-title">
+                            <span>Information</span>
+                            <h2>Contact Details</h2>
+                        </div>
+                        <p>As you might expect, we are a domestic worker's placement agency, determined to ease the process of finding domestic workers as well as domestic workers seekers in order to bring them together to help one another when ever its needed.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="contact__widget__item">
+                        <div class="contact__widget__item__icon">
+                            <img src="img/contact/ci-1.png" alt="">
+                        </div>
+                        <div class="contact__widget__item__text">
+                            <h5>Phone Number</h5>
+                            <span>+27 60 8585 764</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="contact__widget__item">
+                        <div class="contact__widget__item__icon">
+                            <img src="img/contact/ci-2.png" alt="">
+                        </div>
+                        <div class="contact__widget__item__text">
+                            <h5>Email Address</h5>
+                            <span>info.reliablehelpers@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="contact__widget__item last__item">
+                        <div class="contact__widget__item__icon">
+                            <img src="img/contact/ci-3.png" alt="">
+                        </div>
+                        <div class="contact__widget__item__text">
+                            <h5>Office Location</h5>
+                            <span>2092 Ext2 Block/B Letlhabile, North West, South Africa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12087.069761554938!2d-74.2175599360452!3d40.767139456514954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c254b5958982c3%3A0xb6ab3931055a2612!2sEast%20Orange%2C%20NJ%2C%20USA!5e0!3m2!1sen!2sbd!4v1581710470843!5m2!1sen!2sbd"
+                height="460" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="contact__form__text">
+                        <div class="section-title">
+                            <span>Form</span>
+                            <h2>Get in touch</h2>
+                        </div>
+                        <p class = "lead text-warning">Leave us a message</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="contact__form">
+                        <form id = "mail">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input id = "name" name = "name" type="text" placeholder="Name">
+                                </div>
+                                <div id = "email" name = "email" class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text" placeholder="Email">
+                                </div>
+                                <div class="col-lg-12">
+                                    <textarea id = "message" name = "message" placeholder="Message"></textarea>
+                                    <button type="submit" class="site-btn">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+        <div th:insert = "footer :: footer"></div>
+</footer>
+<!-- Footer Section End -->
+
+<!-- Js Plugins -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $(document).ready(function(){
+    		$("#news").submit(function(event){
+    		event.preventDefault();
+    		let NewsMail ={
+        			
+        			email: $("#mail").val(),
+        	}
+    		
+    		
+    		$.ajax({
+    			url:"http://localhost:8080/api/save-mail",
+    			dataType:"json",
+    			headers:{
+    				"Content-Type":"application/json"
+    			},
+    			type:"post",
+    			data:JSON.stringify(NewsMail),
+    			success:function(data){
+    				console.log(data);
+    			},
+    			error:function(error){
+    				console.log(error);
+    			}
+    		})
+    		
+    	})
+    	
+		$("#mail").submit(function(event){
+			event.preventDefault();
+			let email ={
+					name:$("#name").val(),
+					eml:$("#email").val(),
+					message:$("#message").val(),
+					to:"justinldube31@gmail.com"
+			}
+			$.ajax({
+				url:"",
+				dataType:"json",	headers:{
+    				"Content-Type":"application/json"
+    			},
+    			type:"post",
+    			data:JSON.stringify(email),
+    			success:function(data){
+    				console.log(data);
+    			},
+    			error:function(error){
+    				console.log(error);
+    			}
+			})
+		})    	
+    })
+</script>
+</body>
+
+</html>

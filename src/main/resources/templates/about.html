@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Staging Template">
+    <meta name="keywords" content="Staging, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>about</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+   
+   <div th:insert = "side-bar :: side-bar"></div>
+    
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div th:insert="header :: header"></div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Breadcrumb Section Begin -->
+    <div class="breadcrumb-option spad set-bg" data-setbg="img/breadcrumb-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>About Us</h2>
+                        <div class="breadcrumb__links">
+                            <a href="./index.html">Home</a>
+                            <span>About Us</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Section End -->
+
+    <!-- About Page Section Begin -->
+    <section class="about-page spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <div class="about__text about__page__text">
+                        <div class="section-title">
+                            <span>who are we</span>
+                            <h2>About Us</h2>
+                        </div>
+                        <div class="about__para__text">
+                            <p>We are a team dedicated to simplify the process of getting workers within the domestic field into their work place across South Africa by compiling all necessarily documents that a potential employer may need.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8">
+                    <div class="about__page__services">
+                        
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="services__item">
+                                    <img src="img/services/services-5.png" alt="">
+                                    <h4>Our Mission</h4>
+                                    <p>Our mission is simple, we locate the employer as well as a helper close by to help the employer with which ever domestic sort of job is required by the employer. We do so taking into consideration the fact that both security for both employer and employee is set in place. Therefore we use experts advice and sophisticated credit as well as criminal record tools available to us to do deep background check. And lastly an interview conducted within 3 parties to further analize both employee and employer to in sure that both employer and employee are satisfied with each other prior to the commencement of service. </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="services__item">
+                                    <img src="img/services/services-6.png" alt="">
+                                    <h4>Our Vision</h4>
+                                    <p>Our vision is to eliminate the large cluster of unemployed community within South Africa by leveraging the technological equipment to bring potential employers and employees close to each other in relational mutual agreement for eradicating unemployment rate in the country.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Page Section End -->
+
+    <!-- Call To Action Section Begin -->
+    <section class="callto spad set-bg" data-setbg="img/call-bg.jpg">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <div class="callto__text">
+                        <span>Why choose us?</span>
+                        <h2>Our ability to bring outstanding results to our clients.</h2>
+                        <a href="contact.html" class="primary-btn">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Call To Action Section End -->
+
+    <!-- Team Section Begin -->
+    <section class="team spad">
+       <div th:insert = "team :: team"></div>
+    </section>
+    <!-- Team Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+    
+     <div th:insert = "footer :: footer">
+     </div>
+</footer>
+<!-- Footer Section End -->
+
+<!-- Js Plugins -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $(document).ready(function(){
+    		$("#news").submit(function(event){
+    		event.preventDefault();
+    		let NewsMail ={
+        			
+        			email: $("#mail").val(),
+        	}
+    		$.ajax({
+    			url:"http://localhost:8080/api/save-mail",
+    			dataType:"json",
+    			headers:{
+    				"Content-Type":"application/json"
+    			},
+    			type:"post",
+    			data:JSON.stringify(NewsMail),
+    			success:function(data){
+    				console.log(data);
+    			},
+    			error:function(error){
+    				console.log(error);
+    			}
+    		})
+    		
+    	})
+    })
+</script>
+</body>
+
+</html>

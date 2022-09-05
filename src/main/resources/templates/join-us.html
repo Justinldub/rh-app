@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Staging Template">
+    <meta name="keywords" content="Staging, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>join-us</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+  <div th:insert = "side-bar :: side-bar"></div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header header-normal set-bg" data-setbg="img/little-header.jpg">
+       
+       <div th:insert = "registration-header :: registration-header"></div>
+    </header>
+    <!-- Header Section End -->
+ 	
+   <section class="about spad">
+   <h2 class = "text-center">Join us</h2>
+   <br>
+        <div class="container col-lg-12">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="about__text">
+                        <div class="section-title">
+                            <h2>Looking for a Domestic worker?</h2>
+                            <span>Let us establish a search team on your behalf.</span>
+                        </div>
+                        <div class="about__para__text">
+                            <p>We would like to ask that you register your information with us so we may use this information to search and find the worker of your desire.
+                           	  After we've located the worker we would then compile all necessary paper work and then will contact you of our outcome.
+                           	  From there we would like to invite you for an interview where we will interview the workers to find out if the worker has got what it takes to complete the everyday roles that you will be requiring.</p>
+                            <p class = "lead">And so please proceed to the registration page using the link below to join us.</p>
+                        </div>
+                        <a href="/client-register-employer.html" class="primary-btn normal-btn">Register as an Employer</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="about__pic">
+                        <div class="about__pic__inner">
+                            <img src="img/join-us.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="about__text">
+                        <div class="section-title">
+                            <h2>Are you looking for Domestic Worker job?</h2>
+                            <span>Have you got what it takes to handle domestic worker roles on daily basis</span>
+                        </div>
+                        <div class="about__para__text">
+                            <ul class = "text-danger">
+                            <li>Is your hospitality exclusive?</li>
+                            <li>Is cleanliness, extra effort, tender love part of who you are?</li>
+                            <li>Do you have tender care when it comes to handle grannies and babies</li>
+                            </ul>
+                        </div>
+                        <div class="section-footer">
+                            
+                            <span>If this is who you are then you are just the person we are looking for.</span>
+                        	<p class = "lead">Please proceed to the registration section using the button below to allow us to place you in one of our clients or help you in future.</p>
+                        </div>
+                        <a href="/client-register-employee.html" class="primary-btn normal-btn">Register as an Employee</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section Begin -->
+    <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+        <div th:insert = "footer :: footer"></div>
+</footer>
+<!-- Footer Section End -->
+
+<!-- Js Plugins -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $(document).ready(function(){
+    		$("#news").submit(function(event){
+    		event.preventDefault();
+    		let NewsMail ={
+        			
+        			email: $("#mail").val(),
+        	}
+    		$.ajax({
+    			url:"http://localhost:8080/api/save-mail",
+    			dataType:"json",
+    			headers:{
+    				"Content-Type":"application/json"
+    			},
+    			type:"post",
+    			data:JSON.stringify(NewsMail),
+    			success:function(data){
+    				console.log(data);
+    			},
+    			error:function(error){
+    				console.log(error);
+    			}
+    		})
+    		
+    	})
+    })
+</script>
+</body>
+
+</html>
