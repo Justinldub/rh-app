@@ -163,7 +163,7 @@
         			email: $("#mail").val(),
         	}
     		$.ajax({
-    			url:"http://localhost:8080/api/save-mail",
+    			url:"https://rh-app-v1.herokuapp.com/api/save-mail",
     			dataType:"json",
     			headers:{
     				"Content-Type":"application/json"
@@ -180,7 +180,7 @@
     		
     	})
     	$.ajax({
-    		url:"http://localhost:8080/api/get-roles",
+    		url:"https://rh-app-v1.herokuapp.com/api/get-roles",
     		type:"GET",
     		dataType:"json",
     		success:function(data){
@@ -231,7 +231,7 @@
                },
                data:JSON.stringify(person),
                crossDomain: true,
-               url:"http://localhost:8080/api/register-user",
+               url:"https://rh-app-v1.herokuapp.com/api/register-user",
                success:function(data){
                         console.log("User :"+data +" Is successfully registered");
                         $("#reg-validate").append("You have successfully registered your profile with us. \n We will be in touch");
