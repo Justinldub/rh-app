@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Staging Template">
+    <meta name="keywords" content="Staging, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slick.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Side bar + Preloader -->
+   <div th:insert = "side-bar :: side-bar">
+   </div>
+    
+	<header class = "header">
+		<div th:insert = "header :: header">
+		</div>
+	</header>
+  
+    <!-- Hero Section Begin -->
+    <section class="hero">
+       <div th:insert = "hero :: hero"></div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Section Begin -->
+    <section class="about spad">
+        <div class="container">
+            <div class="row">
+             <div class="col-lg-6">
+                    <div class="about__pic">
+                        <div class="about__pic__inner">
+                            <img src="img/about.jpg" alt="" style = "height:800px;width:500px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about__text">
+                        <div class="section-title">
+                            <span>who are we</span>
+                            <h2>We are South Africa's domestic workers placement agency</h2>
+                        </div>
+                        <div class="about__para__text">
+                            <p>We provide our clients with the most flexible domestic workers able to meet our clients needs on a daily basis, to ensure that both parties are well satisfied during their partnership.
+                            And so we offer a single day placement in case our clients needs workers to do a single day work and we also offer placement for work that is needed on a monthly basis, such as care givers, child care and so on.</p>
+                            <h3 class ="text-warning">Please choose the kind of cooperation you would like to create with us</h3>
+                        </div>
+                       <div class = "form-group row col-lg-12"> <a th:href="@{/client-register-employer.html}" class="primary-btn normal-btn col-lg-6">Are you in need of a worker?</a> 
+                       <p class = "text-dark">Please choose this option to join our clients seeking domestic workers and be one step ahead to recieve one.</p>
+                       <h4>OR <br> </h4> <a  th:href="@{/client-register-employee.html}" class="primary-btn  normal-btn col-lg-6">Are you a domestic worker?</a></div>
+                       <p class = "text-dark">Please choose this option if you are seeking domestic worker's job and join our database for future employment opportunities.</p>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+    
+    <!--Start of Ads section -->
+	  <section class = "hero">
+    	<div class="hero__slider owl-carousel" style = "padding-left:10px;padding-right:10px;">
+            <div class="hero__items set-bg" data-setbg="img/services/child.jpg">
+                
+            </div>
+            
+             <div class="hero__items set-bg" data-setbg="img/services/granny.jpg">
+            
+            </div>
+            
+          
+            <div class="hero__items set-bg" data-setbg="img/services/aupair.jpg">
+                
+            </div>
+          <div class="hero__items set-bg" data-setbg="img/services/garden.jpg" >
+                
+            </div>
+          <div class="hero__items set-bg" data-setbg="img/services/food.jpg">
+                
+            </div>
+        </div>
+        <div class="slide-num" id="snh-1"></div>
+        <div class="slider__progress"><span></span></div>
+    </section>
+    <!-- End of Ads section -->
+    
+    <!-- About Section End -->
+
+    <!-- Project Section Begin 
+    <section class="project">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <span>Our works</span>
+                        <h2>Latest projects</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="project__slider owl-carousel">
+                    <div class="col-lg-3">
+                        <div class="project__slider__item set-bg" data-setbg="img/project/project-1.jpg">
+                            <div class="project__slider__item__hover">
+                                <span>interiors</span>
+                                <h5>Lower River Street Astoria</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="project__slider__item set-bg" data-setbg="img/project/project-2.jpg">
+                            <div class="project__slider__item__hover">
+                                <span>interiors</span>
+                                <h5>Lower River Street Astoria</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="project__slider__item set-bg" data-setbg="img/project/project-3.jpg">
+                            <div class="project__slider__item__hover">
+                                <span>interiors</span>
+                                <h5>Lower River Street Astoria</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="project__slider__item set-bg" data-setbg="img/project/project-4.jpg">
+                            <div class="project__slider__item__hover">
+                                <span>interiors</span>
+                                <h5>Lower River Street Astoria</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="project__slider__item set-bg" data-setbg="img/project/project-2.jpg">
+                            <div class="project__slider__item__hover">
+                                <span>interiors</span>
+                                <h5>Lower River Street Astoria</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Project Section End -->
+
+    <!-- Services Section Begin -->
+    <section class="services spad col-lg-12">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Our specialization</span>
+                        <h2>What we do</h2>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="services__item">
+                        <img src="img/services/services-1.png" alt="">
+                       
+                        <h4 class = "text-danger">Domestic Workers | Nanny | AU Pair | Home Base Care Workers</h4>
+                        <p>All our workers are subject to screen, for both criminal and credit records, this is in order to provide the most secure, well desciplined and valuable individual candidates for every job request</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="services__item">
+                        <img src="img/services/services-2.png" alt="">
+                        <h4 class = "text-danger"> Time based placement</h4>
+                        <p>We can find people for the domestic based work at any time and  ,so our company is able to place
+                        workers on a daily basis or monthly based depending on the kind of job requirements and the renumeration per agreement.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="services__item">
+                        <img src="img/services/services-3.png" alt="">
+                        <h4 class = "text-danger">Compliance services</h4>
+                        <p>We offer compliance services and so if you already have an existing employee we can help you register her for Unemployment Insurance Fund(UIF), Provident fund or Medical Aid even compile her job specifications and pay slips.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="services__item">
+                        <img src="img/services/services-4.png" alt="">
+                        <h4 class = "text-danger">Advisors</h4>
+                        <p>We offer experts advice and consultation in regards to CCMA issues. We are also Authorized to assist with Lesotho work permits</p>
+                    </div>
+                </div>
+            </div>
+            <div class="counter__content">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="counter__item">
+                            <div class="counter__item__number">
+                                <h2 class="count">85</h2>
+                            </div>
+                            <div class="counter__item__text">
+                                <h5>Workers<br /> in service</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="counter__item">
+                            <div class="counter__item__number">
+                                <h2 class="count">127</h2>
+                            </div>
+                            <div class="counter__item__text">
+                                <h5>Happy<br /> Clients</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="counter__item">
+                            <div class="counter__item__number">
+                                <h2 class="count">36</h2>
+                            </div>
+                            <div class="counter__item__text">
+                                <h5>Total Workers<br /> registered</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="counter__item">
+                            <div class="counter__item__number">
+                                <h2 class="count">744</h2>
+                            </div>
+                            <div class="counter__item__text">
+                                <h5>Cups Of<br /> Coffee</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section End -->
+
+    <!-- Testimonial Section Begin
+    <section class="testimonial spad set-bg" data-setbg="img/testimonial/testimonial-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-title">
+                        <span>Testimonials</span>
+                        <h2>What your clients say</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="testimonial__carousel">
+                        <div class="testimonial__item">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-xl-9 col-lg-10">
+                                    <p>“1. Fast and accurate at solving mental math problems involving addition,
+                                        subtraction, multiplication, division and percentages but without high-level
+                                        skills that might be required in jobs requiring complex calculation and
+                                    analysis.”</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial__item">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-xl-9 col-lg-10">
+                                    <p>“2. Fast and accurate at solving mental math problems involving addition,
+                                        subtraction, multiplication, division and percentages but without high-level
+                                        skills that might be required in jobs requiring complex calculation and
+                                    analysis.”</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial__item">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-xl-9 col-lg-10">
+                                    <p>“3. Fast and accurate at solving mental math problems involving addition,
+                                        subtraction, multiplication, division and percentages but without high-level
+                                        skills that might be required in jobs requiring complex calculation and
+                                    analysis.”</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial__item">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-xl-9 col-lg-10">
+                                    <p>“4. Fast and accurate at solving mental math problems involving addition,
+                                        subtraction, multiplication, division and percentages but without high-level
+                                        skills that might be required in jobs requiring complex calculation and
+                                    analysis.”</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial__item">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-lg-9">
+                                    <p>“5. Fast and accurate at solving mental math problems involving addition,
+                                        subtraction, multiplication, division and percentages but without high-level
+                                        skills that might be required in jobs requiring complex calculation and
+                                    analysis.”</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-xl-6 col-lg-8 col-md-7 col-sm-10 ">
+                    <div class="testimonial__client">
+                        <div class="testimonial__client__item add">
+                            <div class="testimonial__client__pic">
+                                <img src="img/testimonial/ta-1.png" alt="">
+                            </div>
+                            <div class="testimonial__client__text">
+                                <h5>Renee Calhoun</h5>
+                                <span>CEO Woolley</span>
+                            </div>
+                        </div>
+                        <div class="testimonial__client__item">
+                            <div class="testimonial__client__pic">
+                                <img src="img/testimonial/ta-2.png" alt="">
+                            </div>
+                            <div class="testimonial__client__text">
+                                <h5>Renee Calhoun</h5>
+                                <span>CEO Woolley</span>
+                            </div>
+                        </div>
+                        <div class="testimonial__client__item">
+                            <div class="testimonial__client__pic">
+                                <img src="img/testimonial/ta-3.png" alt="">
+                            </div>
+                            <div class="testimonial__client__text">
+                                <h5>Renee Calhoun</h5>
+                                <span>CEO Woolley</span>
+                            </div>
+                        </div>
+                        <div class="testimonial__client__item">
+                            <div class="testimonial__client__pic">
+                                <img src="img/testimonial/ta-4.png" alt="">
+                            </div>
+                            <div class="testimonial__client__text">
+                                <h5>Renee Calhoun</h5>
+                                <span>CEO Woolley</span>
+                            </div>
+                        </div>
+                        <div class="testimonial__client__item">
+                            <div class="testimonial__client__pic">
+                                <img src="img/testimonial/ta-5.png" alt="">
+                            </div>
+                            <div class="testimonial__client__text">
+                                <h5>Renee Calhoun</h5>
+                                <span>CEO Woolley</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="logo__carousel owl-carousel">
+                        <div class="logo__carousel__item">
+                            <a href="#"><img src="img/logo/logo-1.png" alt=""></a>
+                        </div>
+                        <div class="logo__carousel__item">
+                            <a href="#"><img src="img/logo/logo-2.png" alt=""></a>
+                        </div>
+                        <div class="logo__carousel__item">
+                            <a href="#"><img src="img/logo/logo-3.png" alt=""></a>
+                        </div>
+                        <div class="logo__carousel__item">
+                            <a href="#"><img src="img/logo/logo-4.png" alt=""></a>
+                        </div>
+                        <div class="logo__carousel__item">
+                            <a href="#"><img src="img/logo/logo-5.png" alt=""></a>
+                        </div>
+                        <div class="logo__carousel__item">
+                            <a href="#"><img src="img/logo/logo-3.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Section End -->
+
+    <!-- Team Section Begin -->
+    <section class="team spad">
+       <div th:insert = "team :: team"></div>
+    </section>
+    <!-- Team Section End -->
+
+    <!-- Call To Action Section Begin -->
+    <section class="callto spad set-bg" data-setbg="img/call-bg.jpg">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <div class="callto__text">
+                        <span>Why choose us?</span>
+                        <h2>Our Ability To Deliver Outstanding Results For Our Clients Starts With Our Team Of Smart.
+                        </h2>
+                        <a href="/contact.html" class="primary-btn">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Call To Action Section End -->
+
+    <!-- Latest Section Begin 
+    <section class="latest spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-8 col-sm-6">
+                    <div class="section-title">
+                        <span>Latest News</span>
+                        <h2>From our blog</h2>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="latest__btn">
+                        <a href="#" class="primary-btn normal-btn">View All</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="latest__item">
+                        <div class="latest__item__pic">
+                            <img src="img/blog/latest-1.jpg" alt="">
+                        </div>
+                        <div class="latest__item__text">
+                            <span>Architecture</span>
+                            <h4>Target and Amazon Shopping List for Home Stagers</h4>
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="latest__item">
+                        <div class="latest__item__pic">
+                            <img src="img/blog/latest-2.jpg" alt="">
+                        </div>
+                        <div class="latest__item__text">
+                            <span>Interior</span>
+                            <h4>6 Ideas for Team Building and Employee Appreciation for Home Stagers</h4>
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="latest__item">
+                        <div class="latest__item__pic">
+                            <img src="img/blog/latest-3.jpg" alt="">
+                            
+                        </div>
+                        <div class="latest__item__text">
+                            <span>Planning</span>
+                            <h4>How to Find the Best Price Structure for Your Home Staging Services</h4>
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Latest Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+     <div  th:insert = "footer :: footer"></div>
+</footer>
+<!-- Footer Section End -->
+
+<!-- Js Plugins -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $(document).ready(function(){
+    		$("#news").submit(function(event){
+    		event.preventDefault();
+    		let NewsMail ={
+        			
+        			email: $("#mail").val(),
+        	}
+    		$.ajax({
+    			url:"http://localhost:8080/api/save-mail",
+    			dataType:"json",
+    			headers:{
+    				"Content-Type":"application/json"
+    			},
+    			type:"post",
+    			data:JSON.stringify(NewsMail),
+    			success:function(data){
+    				console.log(data);
+    			},
+    			error:function(error){
+    				console.log(error);
+    			}
+    		})
+    		
+    	})
+    })
+</script>
+</body>
+
+</html>
